@@ -1,1 +1,58 @@
-/home/mikhail-hyde/.vimrc
+" SETS "
+set termguicolors
+
+set number
+set relativenumber
+set expandtab
+set smartindent
+set wrap
+set swapfile
+set backup
+set undofile
+set hlsearch
+set incsearch
+set ignorecase
+set smartcase
+set splitbelow
+set splitright
+set cursorline
+set linebreak
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+set undodir=os.getenv('HOME') .. '/.vim/undodir'
+set scrolloff=2
+set signcolumn='yes'
+set updatetime=30
+set clipboard="unnamedplus"
+set cmdheight=2
+set completeopt={ "menuone", "noselect" }
+set conceallevel=0
+set fileencoding="utf-8"
+set pumheight=10
+set numberwidth=2
+set sidescrolloff=4
+set whichwrap="bs<>[]hl"
+
+" KEYMAPS "
+let mapleader=' '
+let maplocalleader=' '
+
+" Normal mode mappings "
+nnoremap J :m .+1<CR>==
+nnoremap K :m .-2<CR>==
+nnoremap QQ :q!<CR>
+nnoremap WW :w!<CR>
+nnoremap E $
+nnoremap B ^
+nnoremap ss :noh<CR>
+
+" Visual mode mappings "
+vnoremap < <gv^
+vnoremap > >gv^
+vnoremap p "_dP
+
+" Visual block mode mappings "
+xnoremap J :m '>+1<CR>gv=gv
+xnoremap K :m '<-2<CR>gv=gv
+
