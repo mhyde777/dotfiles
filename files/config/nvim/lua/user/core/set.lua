@@ -52,4 +52,6 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 
 -- Set Tab Spacing to 2 for Lua files
 vim.cmd[[ autocmd FileType lua set tabstop=2 shiftwidth=2 ]]
+-- Set Tab Spacing to 4 for YAML files
+vim.cmd[[ autocmd FileType yaml set tabstop=4 shiftwidth=4 ]]
 

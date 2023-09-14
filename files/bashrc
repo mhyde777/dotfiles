@@ -126,36 +126,18 @@ if [ -f ~/.shell/bash_func.sh ]; then
     . ~/.shell/bash_func.sh
 fi
 
-# Global AWS Region
+. "$HOME/.cargo/env"
+
 export AWS_DEFAULT_REGION=us-east-1
-
-# Configure PYTHONPATH
 export PYTHONPATH="${PYTHONPATH}:$HOME/.local/bin"
-export PYTHONPATH="${PYTHONPATH}:$HOME/Documents/scripts/python/tools/"
-export PYTHONPATH="${PYTHONPATH}:$HOME/Documents/code/mordor/python/lib/"
-export PYTHONPATH="${PYTHONPATH}:$HOME/Documents/code/factory-software/common/"
-export PYTHONPATH="${PYTHONPATH}:$HOME/Documents/code/factory-software/components/tars/src/"
-export PYTHONPATH="${PYTHONPATH}:$HOME/Documents/code/Playground/mhyde/"
-
-# PreForm Python Bindings
-export PYTHONPATH="${PYTHONPATH}:$HOME/code/PreForm/build/lib/PythonBindings/output/"
-
-# NeoVim Config
 export PATH="$HOME/.neovim/bin:$PATH"
-
-# PreForm Shared Library Hack
-export LD_LIBRARY_PATH=$HOME/Documents/code/extra/
-
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 export PATH=$PATH:/usr/local/go/bin
 
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/home/mikhail-hyde/.google/path.bash.inc' ]; then . '/home/mikhail-hyde/.google/path.bash.inc'; fi
-
 # The next line enables shell command completion for gcloud.
 if [ -f '/home/mikhail-hyde/.google/completion.bash.inc' ]; then . '/home/mikhail-hyde/.google/completion.bash.inc'; fi
 
 set -o vi
-
-. "$HOME/.cargo/env"
 
