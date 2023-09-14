@@ -1,0 +1,20 @@
+- defaults:
+  link:
+    relink: true
+
+- clean: ['~']
+
+- link:
+  ~/.config/: files/config/
+  ~/.shell/: files/shell/
+  ~/.vimrc: files/vimrc
+  ~/.bashrc: files/bashrc
+  ~/.bash_aliases: files/bash_aliases
+
+- create:
+  - ~/.vim/undo-history
+
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]
+  - [sudo apt install kitty ripgrep neofetch nala]
+
