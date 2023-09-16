@@ -126,14 +126,13 @@ if [ -f ~/.shell/bash_func.sh ]; then
     . ~/.shell/bash_func.sh
 fi
 
-. "$HOME/.cargo/env"
 
 export AWS_DEFAULT_REGION=us-east-1
 export PYTHONPATH="${PYTHONPATH}:$HOME/.local/bin"
 export PATH="$HOME/.neovim/bin:$PATH"
 export PATH=$PATH:/usr/local/go/bin
+. "$HOME/.cargo/env"
 
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/home/mikhail-hyde/.google/path.bash.inc' ]; then . '/home/mikhail-hyde/.google/path.bash.inc'; fi
 # The next line enables shell command completion for gcloud.
