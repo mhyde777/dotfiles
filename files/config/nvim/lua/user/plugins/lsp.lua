@@ -26,7 +26,7 @@ return { -- LSP Configuration & Plugins
 
         vim.keymap.set('n', keys, func, { buffer = bufnr, desc = desc })
       end
-		
+
       nmap('<leader>rn', vim.lsp.buf.rename, '[R]e[n]ame')
       nmap('<leader>ca', vim.lsp.buf.code_action, '[C]ode [A]ction')
 
@@ -48,7 +48,7 @@ return { -- LSP Configuration & Plugins
       nmap('<leader>wl', function()
         print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
       end, '[W]orkspace [L]ist Folders')
-		
+
       -- Create a command `:Format` local to the LSP buffer
       vim.api.nvim_buf_create_user_command(bufnr, 'Format', function(_)
         if vim.lsp.buf.format then
