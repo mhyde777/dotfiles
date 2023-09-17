@@ -5,8 +5,8 @@ return {
     "theHamsta/nvim-dap-virtual-text",
   },
   config = function()
-    require('dapui').setup()
-    require('nvim-dap-virtual-text').setup()
+    require('dapui').setup ()
+    require('nvim-dap-virtual-text').setup {}
     vim.fn.sign_define('DapBreakpoint', { text='🔴', texthl='DapBreakpoint', linehl='DapBreakpoint', numhl='DapBreakpoint' })
 
     vim.api.nvim_set_keymap("n", "<leader>dt", ":DapUiToggle<CR>", {noremap=true})

@@ -3,6 +3,7 @@ return {
   config = function()
     require('Comment').setup()
   end
+
   -- Normal Mode
   -- `gcc` - Toggles the current line using linewise comment
   -- `gbc` - Toggles the current line using blockwise comment
@@ -19,7 +20,7 @@ return {
   -- `gb2}` - Toggle until the 2 next blank line
   -- `gbaf` - Toggle comment around a function (w/ LSP/treesitter support)
   -- `gbac` - Toggle comment around a class (w/ LSP/treesitter support)
-  
+
   -- Visual Mode
   -- `gc` - Toggles the region using linewise comment
   -- `gb` - Toggles the region using blockwise comment

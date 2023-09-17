@@ -8,8 +8,22 @@ return { -- Highlight, edit, and navigate code
 	},
 	config = function()
 		require('nvim-treesitter.configs').setup {
-			-- Add languages to be installed here that you want installed for treesitter
-			ensure_installed = { 'lua', 'python', 'rust', 'regex', 'bash', 'markdown', 'markdown_inline', 'jsonc', 'sql' },
+      modules = {},
+      ignore_install = {},
+      sync_install = true,
+      auto_install = true,
+      -- Add languages to be installed here that you want installed for treesitter
+			ensure_installed = {
+        'c',
+        'cpp',
+        'python',
+        'bash',
+        'jsonc',
+        'lua',
+        'regex',
+        'markdown',
+        'markdown_inline',
+      },
 
 			highlight = { enable = true },
 			indent = { enable = true },
@@ -18,7 +32,6 @@ return { -- Highlight, edit, and navigate code
 				keymaps = {
 					init_selection = '<c-space>',
 					node_incremental = '<c-space>',
-					scope_incremental = '<c-s>',
 					node_decremental = '<c-backspace>',
 				},
 			},

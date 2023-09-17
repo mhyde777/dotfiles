@@ -82,7 +82,7 @@ return { -- LSP Configuration & Plugins
       },
     }
     -- Lua
-		require('lspconfig').luau_lsp.setup {
+		require('lspconfig').lua_ls.setup {
       on_attach = on_attach,
       capabilities = capabilities,
       settings = {

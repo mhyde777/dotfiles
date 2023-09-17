@@ -5,10 +5,10 @@ return { -- Autocompletion
     'L3MON4D3/LuaSnip',
     'saadparwaiz1/cmp_luasnip'
 	},
-  config = function()	
+  config = function()
     local cmp = require 'cmp'
     local luasnip = require 'luasnip'
-            
+
     cmp.setup {
     snippet = {
       expand = function(args)
@@ -16,9 +16,6 @@ return { -- Autocompletion
       end,
       },
       mapping = cmp.mapping.preset.insert {
-        ['<C-d>'] = cmp.mapping.scroll_docs(-4),
-        ['<C-f>'] = cmp.mapping.scroll_docs(4),
-        ['<C-l>'] = cmp.mapping.complete(),
         ['<CR>'] = cmp.mapping.confirm {
           behavior = cmp.ConfirmBehavior.Replace,
           select = true,
