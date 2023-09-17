@@ -74,20 +74,6 @@ return { -- LSP Configuration & Plugins
     local capabilities = require("cmp_nvim_lsp").default_capabilities(vim.lsp.protocol.make_client_capabilities())
 		capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
 
-		for _, lsp in ipairs(servers) do
-      require('lspconfig')[lsp].setup {
-        on_attach = on_attach,
-        capabilities = capabilities,
-        settings = {
-          Lua = {
-            diagnostics = {
-              globals = { 'vim' },
-            },
-          },
-        },
-      }
-    end
-
 		-- Turn on lsp status information
 		require('fidget').setup()
 
@@ -96,8 +82,13 @@ return { -- LSP Configuration & Plugins
 		table.insert(runtime_path, 'lua/?.lua')
 		table.insert(runtime_path, 'lua/?/init.lua')
 
-    require('lspconfig').clangd.setup {}
+    require('lspconfig').clangd.setup {
+      on_attach = on_attach,
+      capabilities = capabilities,
+    }
     require('lspconfig').pyright.setup {
+      on_attach = on_attach,
+      capabilities = capabilities,
       settings = {
         pyright = {
           autoImportCompletion = true,
@@ -110,7 +101,7 @@ return { -- LSP Configuration & Plugins
             typeCheckingMode = 'off',
             extraPaths = {
               os.getenv('HOME') .. '/.local/lib/python3.10/site-packages',
-            }
+            },
           },
         },
       },
@@ -137,8 +128,14 @@ return { -- LSP Configuration & Plugins
         },
       },
 		}
-    require('lspconfig').bashls.setup {}
-    require('lspconfig').jsonls.setup {}
+    require('lspconfig').bashls.setup {
+      on_attach = on_attach,
+      capabilities = capabilities,
+    }
+    require('lspconfig').jsonls.setup {
+      on_attach = on_attach,
+      capabilities = capabilities,
+    }
 
 		vim.api.nvim_create_autocmd('FileType', {
 			pattern = 'sh',
