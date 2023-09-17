@@ -20,13 +20,11 @@ set linebreak
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
-set undodir=os.getenv('HOME') .. '/.vim/undo-history'
+set undodir='$HOME/.vim/undo-history'
 set scrolloff=2
-set signcolumn='yes'
 set updatetime=30
 set clipboard="unnamedplus"
 set cmdheight=2
-set completeopt={ "menuone", "noselect" }
 set conceallevel=0
 set fileencoding="utf-8"
 set pumheight=10
