@@ -64,14 +64,14 @@ return { -- LSP Configuration & Plugins
 
 		-- Enable the following language servers
 		-- Feel free to add/remove any LSPs that you want here. They will automatically be installed
-		local servers = { 'clangd', 'rust_analyzer', 'pyright', 'bashls', 'jsonls', 'lua_ls'  }
+		local servers = { 'clangd', 'pyright', 'lua_ls', 'bashls', 'jsonls'  }
 
 		-- Ensure the servers above are installed
 		require('mason-lspconfig').setup {
       ensure_installed = servers,
 		}
 		-- nvim-cmp supports additional completion capabilities
-		local capabilities = vim.lsp.protocol.make_client_capabilities()
+    local capabilities = require("cmp_nvim_lsp").default_capabilities(vim.lsp.protocol.make_client_capabilities())
 		capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
 
 		for _, lsp in ipairs(servers) do
@@ -96,15 +96,32 @@ return { -- LSP Configuration & Plugins
 		table.insert(runtime_path, 'lua/?.lua')
 		table.insert(runtime_path, 'lua/?/init.lua')
 
+    require('lspconfig').clangd.setup {}
+    require('lspconfig').pyright.setup {
+      settings = {
+        pyright = {
+          autoImportCompletion = true,
+        },
+        python = {
+          analysis = {
+            autoSearchPaths = true,
+            diagnosticMode = 'openFilesOnly',
+            useLibraryCodeForTypes = true,
+            typeCheckingMode = 'off',
+            extraPaths = {
+              os.getenv('HOME') .. '/.local/lib/python3.10/site-packages',
+            }
+          },
+        },
+      },
+    }
 		require('lspconfig').luau_lsp.setup {
       on_attach = on_attach,
       capabilities = capabilities,
       settings = {
         Lua = {
           runtime = {
-            -- Tell the language server which version of Lua you're using (most likely LuaJIT)
             version = 'LuaJIT',
-            -- Setup your lua path
             path = runtime_path,
           },
           diagnostics = {
@@ -114,15 +131,14 @@ return { -- LSP Configuration & Plugins
             library = vim.api.nvim_get_runtime_file('', true),
             checkThirdParty = false,
           },
-          -- Do not send telemetry data containing a randomized but unique identifier
           telemetry = {
             enable = false
           },
         },
       },
 		}
-
-    require('lspconfig').clangd.setup {}
+    require('lspconfig').bashls.setup {}
+    require('lspconfig').jsonls.setup {}
 
 		vim.api.nvim_create_autocmd('FileType', {
 			pattern = 'sh',
