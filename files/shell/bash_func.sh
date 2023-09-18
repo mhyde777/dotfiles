@@ -39,7 +39,6 @@ alias update-nvim=install-nvim
 function install-nvim {
     TARGET="$HOME/Documents/sources/neovim"
     if [ "$(pwd)" == "$TARGET" ]; then
-        git pull
         rm -r build/
         make CMAKE_EXTRA_FLAGS="-DCMAKE_INSTALL_PREFIX=$HOME/.neovim"
         make install
