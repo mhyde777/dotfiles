@@ -1,4 +1,3 @@
-
 # Diesel Deploy Script
 alias diesel-sync=mordor-sync
 function mordor-sync {
@@ -34,5 +33,19 @@ function mordor-sync {
 
     rsync -ai --include "*/" --include "*.py" --exclude "*" \
         "$MORDOR/python/lib/protobuf" "$IP:/usr/lib/python3.10/site-packages/"
+}
+
+alias update-nvim=install-nvim
+function install-nvim {
+    TARGET="$HOME/Documents/sources/neovim"
+    if [ "$(pwd)" == "$TARGET" ]; then
+        git pull
+        rm -r build/
+        make CMAKE_EXTRA_FLAGS="-DCMAKE_INSTALL_PREFIX=$HOME/.neovim"
+        make install
+        export PATH="$HOME/.neovim/bin:$PATH"
+    else
+        echo "Please run this function in $TARGET"
+    fi
 }
 
