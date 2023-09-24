@@ -4,7 +4,7 @@ return {
     -- Set lualine as statusline
     -- See `:help lualine.txt`
     local function custom_location()
-      return [[%l/%L:%c]]
+      return [[%l|%L:%c]]
     end
 		require('lualine').setup {
 			options = {
@@ -19,18 +19,18 @@ return {
       sections = {
         lualine_a = {'mode'},
         lualine_b = {'branch', 'diff', 'diagnostics'},
-        lualine_c = {'filename'},
-        lualine_x = {},
+        lualine_c = {'filename', "require('lsp-status').status()"},
+        lualine_x = {'fileformat', 'filetype'},
         lualine_y = {'progress'},
         lualine_z = {custom_location}
       },
       inactive_sections = {
-        lualine_a = {},
-        lualine_b = {},
-        lualine_c = {},
-        lualine_x = {},
-        lualine_y = {},
-        lualine_z = {}
+        lualine_a = {'mode'},
+        lualine_b = {'branch', 'diff', 'diagnostics'},
+        lualine_c = {'filename', "require('lsp-status').status()"},
+        lualine_x = {'fileformat', 'filetype'},
+        lualine_y = {'progress'},
+        lualine_z = {custom_location}
       },
       tabline = {},
       winbar = {},
@@ -39,3 +39,4 @@ return {
 		}
 	end
 }
+
