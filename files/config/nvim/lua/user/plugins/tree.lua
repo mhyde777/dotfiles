@@ -7,7 +7,6 @@ return {
     vim.g.loaded_netrw = 1
     vim.g.loaded_netrwPlugin = 1
 
-    vim.cmd([[ highlight NvimTreeIndentMarker guifg=#3FC5FF ]])
     require("nvim-tree").setup({
       view = {
         width = 30,
@@ -49,6 +48,8 @@ return {
         },
       },
     })
+    vim.cmd([[ highlight NvimTreeIndentMarker guifg=#3FC5FF ]])
+    vim.cmd[[hi NvimTreeNormal guibg=NONE ctermbg=NONE]]
   end,
   vim.keymap.set('n', '<leader>nt', ':NvimTreeToggle<CR>', {noremap=true})
 }
