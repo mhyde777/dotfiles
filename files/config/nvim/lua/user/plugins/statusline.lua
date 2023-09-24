@@ -19,17 +19,17 @@ return {
       sections = {
         lualine_a = {'mode'},
         lualine_b = {'branch', 'diff', 'diagnostics'},
-        lualine_c = {'filename', "require('lsp-status').status()"},
+        lualine_c = {'filename', "%{tagbar#currenttag('%s', '', 'f', 'scoped-stl')}"},
         lualine_x = {'fileformat', 'filetype'},
         lualine_y = {'progress'},
         lualine_z = {custom_location}
       },
       inactive_sections = {
         lualine_a = {'mode'},
-        lualine_b = {'branch', 'diff', 'diagnostics'},
-        lualine_c = {'filename', "require('lsp-status').status()"},
+        lualine_b = {'branch', 'diff'},
+        lualine_c = {'filename'},
         lualine_x = {'fileformat', 'filetype'},
-        lualine_y = {'progress'},
+        lualine_y = {},
         lualine_z = {custom_location}
       },
       tabline = {},
