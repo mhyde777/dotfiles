@@ -12,9 +12,9 @@ return {
 			vim.keymap.set("n", "<leader>ee", "<cmd>GoIfErr<cr>", {silent = true, noremap = true}),
 		}
 		local signs = {
-			Error = " ",
-			Warning = " ",
-			Hint = " ",
+			Error = "",
+			Warning = "",
+			Hint = "",
 			Information = " "
 		}
 		for type, icon in pairs(signs) do

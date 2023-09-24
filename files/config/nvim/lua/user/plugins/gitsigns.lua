@@ -1,13 +1,13 @@
 return {
-  'lewis6991/gitsigns.nvim',
+  "lewis6991/gitsigns.nvim",
   config = function()
-    require('gitsigns').setup {
+    require("gitsigns").setup {
       signs = {
-        add = { text = '+' },
-        change = { text = '~' },
-        delete = { text = '_' },
-        topdelete = { text = '‾' },
-        changedelete = { text = '~' },
+        add = { text = "" },
+        change = { text = "" },
+        delete = { text = "󰺝" },
+        topdelete = { text = "󰱢" },
+        changedelete = { text = "󱕗" },
       },
       current_line_blame = false,
       on_attach = function(bufnr)
@@ -20,20 +20,20 @@ return {
         end
 
         -- Navigation
-        map('n', ']c', function()
-          if vim.wo.diff then return ']c' end
+        map("n", "]c", function()
+          if vim.wo.diff then return "]c" end
           vim.schedule(function() gs.next_hunk() end)
-          return '<Ignore>'
+          return "<Ignore>"
         end, {expr=true})
 
-        map('n', '[c', function()
-          if vim.wo.diff then return '[c' end
+        map("n", "[c", function()
+          if vim.wo.diff then return "[c" end
           vim.schedule(function() gs.prev_hunk() end)
-          return '<Ignore>'
+          return "<Ignore>"
         end, {expr=true})
 
         -- Actions
-        map('n', '<leader>bt', gs.toggle_current_line_blame)
+        map("n", "<leader>bt", gs.toggle_current_line_blame)
       end
     }
 	end
