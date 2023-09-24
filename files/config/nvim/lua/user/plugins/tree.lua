@@ -15,6 +15,14 @@ return {
         dotfiles = false,
         git_ignored = false,
       },
+      actions = {
+        enable = true,
+        global = true,
+        restrict_above_cwd = false,
+        remove_file = {
+          close_window = true,
+        }
+      },
       renderer = {
         highlight_git = true,
         root_folder_modifier = ":t",
@@ -38,6 +46,8 @@ return {
               ignored = "◌",
             },
             folder = {
+              arrow_closed = "",
+              arrow_open = "",
               default = "",
               open = "",
               empty = "",
