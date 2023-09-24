@@ -28,7 +28,6 @@ vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = tr
 -- Better window navigation
 keymap("n", "<leader>vs", ":vsplit<CR>")
 keymap("n", "<leader>hs", ":split<CR>")
-keymap("n", "<leader>x", ":close<CR>")
 keymap("n", "<C-h>", "<C-w>h")
 keymap("n", "<C-j>", "<C-w>j")
 keymap("n", "<C-k>", "<C-w>k")
@@ -43,6 +42,7 @@ keymap("n", "<C-Right>", ":vertical resize -2<CR>")
 -- Navigate buffers
 keymap("n", "<TAB>", ":bnext<CR>")
 keymap("n", "<S-TAB>", ":bprevious<CR>")
+keymap("n", "<leader>x", ":bd<CR>")
 
 -- Move text up and down
 keymap("n", "J", ":m .+1<CR>==")
