@@ -22,10 +22,15 @@ sudo apt install               \
     vim                        \
     ripgrep                    \
     gettext                    \
-    exuberant-ctags
+    exuberant-ctags            \
+    luarocks                   \
+    fd-find
 
 # Normal Person Applications
 sudo apt install               \
     spotify-client             \
     code                       \
     npm
+
+sudo npm install -g tree-sitter-cli
+
