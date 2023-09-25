@@ -1,4 +1,4 @@
 return {
-  "preservim/tagbar",
-  vim.keymap.set("n", "<leader>tt", ":TagbarToggle<CR>")
+  -- "preservim/tagbar",
+  -- vim.keymap.set("n", "<leader>tt", ":TagbarToggle<CR>")
 }

@@ -1,5 +1,8 @@
 return {
   'nvim-lualine/lualine.nvim',
+  dependencies = {
+    "nvim-tree/nvim-web-devicons",
+  },
   config = function()
     -- Set lualine as statusline
     -- See `:help lualine.txt`
@@ -19,7 +22,7 @@ return {
       sections = {
         lualine_a = {'mode'},
         lualine_b = {'branch', 'diff', 'diagnostics'},
-        lualine_c = {'filename', "%{tagbar#currenttag('%s', '', 'f', 'scoped-stl')}"},
+        lualine_c = {'filename'},
         lualine_x = {'fileformat', 'filetype'},
         lualine_y = {'progress'},
         lualine_z = {custom_location}
@@ -32,10 +35,10 @@ return {
         lualine_y = {},
         lualine_z = {custom_location}
       },
+      extensions = {},
       tabline = {},
       winbar = {},
       inactive_winbar = {},
-      extensions = {}
 		}
 	end
 }
