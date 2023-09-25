@@ -1,6 +1,6 @@
 #! /bin/bash
 
-sudo add-apt-repository ppa:ubuntu-toolchain-r/test
+yes | sudo add-apt-repository ppa:ubuntu-toolchain-r/test
 
 # Software Essentials
 sudo apt install               \

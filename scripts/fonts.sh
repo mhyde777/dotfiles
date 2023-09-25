@@ -10,7 +10,6 @@ else
 fi
 
 # Download Extract
-cd $HOME/Downloads
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.2/FiraCode.zip ~/Downloads/
 unzip FiraMono.zip
 
@@ -21,5 +20,5 @@ cp *.otf $DIR
 fc-cache -fv
 
 # Clean Downlaods
-rm $HOME/Downloads/*
+sudo rm FiraCode*
 

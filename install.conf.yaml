@@ -20,4 +20,8 @@
 
 - shell:
     - [git submodule update --init --recursive, Installing submodules]
+    - sudo ./scripts/apps.sh
+    - sudo ./scripts/rm_snap.sh
+    - ./scripts/fonts.sh
+    - ./scripts/fs.sh
 
