@@ -16,9 +16,6 @@ return {
         git_ignored = false,
       },
       actions = {
-        enable = true,
-        global = true,
-        restrict_above_cwd = false,
         remove_file = {
           close_window = true,
         }

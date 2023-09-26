@@ -37,9 +37,17 @@ return { -- LSP Configuration & Plugins
 		-- Setup mason so it can manage external tooling
 		require('mason').setup()
 
-		-- Enable the following language servers
-		-- Feel free to add/remove any LSPs that you want here. They will automatically be installed
-		local servers = { 'clangd', 'pyright', 'lua_ls', 'bashls', 'jsonls'  }
+		local servers = {
+      -- Languages
+      'clangd',
+      'pyright',
+      'lua_ls',
+      -- Shell
+      'bashls',
+      -- Data Formats
+      'jsonls',
+      'yamlls',
+    }
 
 		-- Ensure the servers above are installed
 		require('mason-lspconfig').setup {
@@ -52,20 +60,23 @@ return { -- LSP Configuration & Plugins
 		-- Turn on lsp status information
 		require('fidget').setup()
 
+    for _, server_name in ipairs(servers) do
+      local lspconfig = require('lspconfig')
+      local server = lspconfig[server_name]
+      server.setup({
+        on_attach = on_attach,
+        capabilities = capabilities,
+      })
+    end
+
 		-- Make runtime files discoverable to the server
 		local runtime_path = vim.split(package.path, ';')
 		table.insert(runtime_path, 'lua/?.lua')
 		table.insert(runtime_path, 'lua/?/init.lua')
 
-    -- Clangd (C/C++)
-    require('lspconfig').clangd.setup {
-      on_attach = on_attach,
-      capabilities = capabilities,
-    }
+    -- Additional LSP Setup
     -- Pyright (Python)
     require('lspconfig').pyright.setup {
-      on_attach = on_attach,
-      capabilities = capabilities,
       settings = {
         pyright = {
           autoImportCompletion = true,
@@ -85,8 +96,6 @@ return { -- LSP Configuration & Plugins
     }
     -- Lua
 		require('lspconfig').lua_ls.setup {
-      on_attach = on_attach,
-      capabilities = capabilities,
       settings = {
         Lua = {
           runtime = {
@@ -106,16 +115,6 @@ return { -- LSP Configuration & Plugins
         },
       },
 		}
-    -- Bash
-    require('lspconfig').bashls.setup {
-      on_attach = on_attach,
-      capabilities = capabilities,
-    }
-    -- JSON
-    require('lspconfig').jsonls.setup {
-      on_attach = on_attach,
-      capabilities = capabilities,
-    }
 
     vim.fn.sign_define('DiagnosticSignError', { text = '', texthl = 'DiagnosticSignError' })
     vim.fn.sign_define('DiagnosticSignWarn', { text = '', texthl = 'DiagnosticSignWarn' })
