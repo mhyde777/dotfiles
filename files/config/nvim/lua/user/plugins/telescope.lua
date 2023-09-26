@@ -4,6 +4,7 @@ return {
 	dependencies = {
     'nvim-lua/plenary.nvim',
     'debugloop/telescope-undo.nvim',
+    "smartpde/telescope-recent-files",
   },
 	config = function()
 		require('telescope').setup ({
@@ -27,6 +28,7 @@ return {
     })
     require("telescope").load_extension("undo")
     vim.keymap.set('n', '<leader>ff', require('telescope.builtin').find_files, { desc = '[S]earch [F]iles' })
+    vim.keymap.set('n', '<leader>fd', ":Telescope find_files hidden=true<CR>", { desc = '[S]earch [D]otfiles' })
     vim.keymap.set('n', '<leader>sh', require('telescope.builtin').help_tags, { desc = '[S]earch [H]elp' })
     vim.keymap.set('n', '<leader>fc', require('telescope.builtin').grep_string, { desc = '[S]earch current [W]ord' })
     vim.keymap.set('n', '<leader>fs', require('telescope.builtin').live_grep, { desc = '[S]earch by [G]rep' })
@@ -44,7 +46,9 @@ return {
         previewer = false,
       })
     end, { desc = '[/] Fuzzily search in current buffer]' })
+    require('telescope').load_extension("recent_files")
   end,
   vim.keymap.set("n", "<leader>u", ":Telescope undo<CR>"),
+  vim.keymap.set("n", "<leader>fr", "<Cmd>lua require('telescope').extensions.recent_files.pick()<CR>"),
   vim.api.nvim_set_keymap("n", "<Leader><tab>", "<Cmd>lua require('telescope.builtin').commands()<CR>", {noremap=false}),
 }
