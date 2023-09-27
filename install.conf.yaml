@@ -9,7 +9,6 @@
 - link:
     ~/.config/nvim: files/config/nvim
     ~/.config/kitty: files/config/kitty
-    ~/.config/dconf: files/config/dconf
     ~/.shell: files/shell
     ~/.vimrc: files/vimrc
     ~/.bashrc: files/bashrc
