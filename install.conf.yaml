@@ -10,7 +10,7 @@
     ~/.config/nvim: files/config/nvim
     ~/.config/kitty: files/config/kitty
     ~/.config/dconf: files/config/dconf
-    ~/.shell/: files/shell/
+    ~/.shell: files/shell
     ~/.vimrc: files/vimrc
     ~/.bashrc: files/bashrc
     ~/.bash_aliases: files/bash_aliases
