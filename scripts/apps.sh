@@ -24,6 +24,7 @@ sudo apt install               \
     ripgrep                    \
     gettext                    \
     exuberant-ctags            \
+    gnome-tweaks               \
     luarocks                   \
     fd-find -y
 
