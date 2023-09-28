@@ -10,7 +10,7 @@ echo "Removing snapd"
 echo "Would you like to install Additional Apps? [y/N]"
 read apps
 
-if ["$apps" == "y" ]; then
+if [ "$apps" == "y" ]; then
     echo "Install additional applications"
     ./apps_opt.sh
 else
@@ -20,7 +20,7 @@ fi
 echo "Would you like to install FiraMono Font? [y/N]"
 read font
 
-if ["$font" == "y" ]; then
+if [ "$font" == "y" ]; then
     echo "Installing FiraMono Nerd Font"
     ./fonts.sh
 else
@@ -30,7 +30,7 @@ fi
 echo "Would you like to install Spotify? [y/N]"
 read spotify
 
-if ["$spotify" == "y" ]; then
+if [ "$spotify" == "y" ]; then
     echo "Installing Spotify"
     ./spotify.sh
 else
@@ -40,8 +40,8 @@ fi
 echo "Would you like to install VSCode? [y/N]"
 read vscode
 
-if ["$vscode" == "y" ]; then
-    "Install VSCode"
+if [ "$vscode" == "y" ]; then
+    echo "Installing VSCode"
     ./code.sh
 else
     echo "Ignoring VSCode installation"

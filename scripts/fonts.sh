@@ -20,5 +20,5 @@ cp *.otf $DIR
 fc-cache -fv
 
 # Clean Downlaods
-sudo rm FiraMono* LICENSE README.md
+sudo rm FiraMono* LICENSE readme.md
 
