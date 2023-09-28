@@ -15,18 +15,11 @@ sudo apt install               \
 
 # Applications Only I Would Want
 sudo apt install               \
-    kitty                      \
-    neofetch                   \
-    tree                       \
     htop                       \
     git                        \
     vim                        \
     ripgrep                    \
-    gettext                    \
-    exuberant-ctags            \
-    gnome-tweaks               \
-    luarocks                   \
-    fd-find -y
+    gettext -y
 
 # Normal Person Applications
 sudo apt install               \
@@ -35,10 +28,4 @@ sudo apt install               \
 # Update to latest NPM
 sudo npm install -g n
 sudo n stable
-
-sudo npm install -g tree-sitter-cli
-
-# Install Rust
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-
 
