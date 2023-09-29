@@ -9,7 +9,9 @@ sudo apt install               \
     make                       \
     build-essential            \
     software-properties-common \
+    python3-dev                \
     libstdc++-13-dev           \
+    pkg-config                 \
     gcc-13                     \
     g++-13 -y
 

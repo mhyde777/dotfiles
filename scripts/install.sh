@@ -17,6 +17,15 @@ else
     echo "Ignoring optional apps installation"
 fi
 
+echo "Would you like to install the source repositories? [y/N]"
+read source
+
+if [ "$source" == "y" ]; then
+    ./sources.sh
+else
+    echo "Ignoring source repositories"
+fi
+
 echo "Would you like to install FiraMono Font? [y/N]"
 read font
 

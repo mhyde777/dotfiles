@@ -15,4 +15,3 @@ for dir in $HOME/Documents/code $HOME/Documents/code $HOME/Documents/sources; do
     fi
 done
 
-git clone git@github.com:neovim/neovim.git $HOME/Documents/sources/neovim
