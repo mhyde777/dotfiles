@@ -18,6 +18,7 @@ sudo apt install               \
 # Applications Only I Would Want
 sudo apt install               \
     htop                       \
+    keychain                   \
     git                        \
     vim                        \
     ripgrep                    \

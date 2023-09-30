@@ -141,4 +141,5 @@ if [ -f '/home/mikhail-hyde/.google/path.bash.inc' ]; then . '/home/mikhail-hyde
 if [ -f '/home/mikhail-hyde/.google/completion.bash.inc' ]; then . '/home/mikhail-hyde/.google/completion.bash.inc'; fi
 
 set -o vi
+eval $(keychain --eval --agents ssh --quick --quiet)
 
