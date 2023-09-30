@@ -8,6 +8,7 @@ sudo apt install               \
     nala                       \
     exuberant-ctags            \
     gnome-tweaks               \
+    playerctl                  \
     luarocks                   \
     fd-find -y
 
