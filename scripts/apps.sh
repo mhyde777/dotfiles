@@ -19,6 +19,7 @@ sudo apt install               \
 sudo apt install               \
     curl                       \
     htop                       \
+    keychain                   \
     git                        \
     vim                        \
     ripgrep                    \
