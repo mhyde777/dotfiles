@@ -56,3 +56,13 @@ else
     echo "Ignoring VSCode installation"
 fi
 
+echo "Would you like to install i3 Window Manager? [y/N]"
+read i3
+
+if [ "$i3" == "y" ]; then
+    echo "Installing i3"
+    ./i3.sh
+else
+    echo "Ignoring i3 installation"
+fi
+
