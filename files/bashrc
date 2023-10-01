@@ -141,5 +141,10 @@ if [ -f '/home/mikhail-hyde/.google/path.bash.inc' ]; then . '/home/mikhail-hyde
 if [ -f '/home/mikhail-hyde/.google/completion.bash.inc' ]; then . '/home/mikhail-hyde/.google/completion.bash.inc'; fi
 
 set -o vi
+
 eval $(keychain --eval --agents ssh --quick --quiet)
+
+if [ "$0" = "/usr/sbin/lightdm-session" -a "$DESKTOP_SESSION" = "i3" ]; then
+    export $(gnome-keyring-daemon -s)
+fi
 
