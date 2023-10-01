@@ -17,6 +17,7 @@ sudo apt install               \
 
 # Applications Only I Would Want
 sudo apt install               \
+    curl                       \
     htop                       \
     git                        \
     vim                        \
