@@ -185,4 +185,5 @@ bindsym $mod+b exec google-chrome-stable
 exec_always feh --bg-fill $HOME/Pictures/Wallpapers/low_poly_sun.jpg
 exec_always --no-startup-id compton -b -f
 exec_always setxkbmap -option caps:swapescape
+exec --no-startup-id /usr/lib/gnome-settings-daemon/gnome-settings-daemon
 
