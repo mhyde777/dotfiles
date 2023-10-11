@@ -47,6 +47,7 @@ return { -- LSP Configuration & Plugins
       -- Data Formats
       'jsonls',
       'yamlls',
+      'marksman',
     }
 
 		-- Ensure the servers above are installed

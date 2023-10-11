@@ -14,13 +14,6 @@ sudo rm -rf ~/.local/share/Trash/*
 # Delete Logs Older than 3 Days
 sudo journalctl --vacuum-time=3d
 
-# Clean Snap
-set -eu
-sudo snap list --all | awk '/disabled/{print $1, $3}' |
-    while read snapname revision; do
-        sudo snap remove "$snapname" --revision="$revision"
-    done
-
 # Clear Cache
 sudo rm -rf ~/.cache/thumbnails/*
 

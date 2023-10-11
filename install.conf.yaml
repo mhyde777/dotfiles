@@ -9,6 +9,8 @@
 - link:
     ~/.config/nvim: files/config/nvim
     ~/.config/kitty: files/config/kitty
+    ~/.config/i3: files/config/i3
+    ~/.config/compton.conf: files/config/compton.conf
     ~/.shell: files/shell
     ~/.vimrc: files/vimrc
     ~/.bashrc: files/bashrc
