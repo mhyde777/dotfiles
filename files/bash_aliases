@@ -80,6 +80,9 @@ alias plotlogs="python ~/Documents/code/mordor/python/scripts/diesel/science/plo
 # Show GDB Server Command
 alias gdbserver="echo gdbserver 0.0.0.0:2345 ./task_engine"
 
+# Prepare ESP-IDF
+alias esp=". $HOME/Documents/sources/esp-idf/export.sh"
+
 ##########################################################
 ###					       SSH  					   ###
 ##########################################################
