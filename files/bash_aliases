@@ -10,11 +10,14 @@ alias preform=$HOME/.preform/PreForm.sh
 # Launch PreForm Test
 alias preform_stable=$HOME/.preform_stable/PreForm.sh
 
-# Enable VPN
-alias vpnon="warp-cli connect"
+# Connect VPN
+alias vpnon="openvpn3 session-start --config profile.ovpn"
 
-# Disable VPN
-alias vpnoff="warp-cli disconnect"
+# Pause VPN
+alias vpnoff="openvpn3 session-manage --config profile.ovpn --disconnect"
+
+# CTL VPN
+alias ctl="ssh -i ~/.ssh/id_rsa root@218.17.143.118 -p 15429"
 
 # Container
 alias podman_launch="podman run -it --rm localhost/vsc-task_apps-c850dfbea378909420d9533eeb7141236e85a4d7e9121e885d41cb884418ab31-uid /bin/bash"
@@ -108,6 +111,9 @@ alias engine="cd $HOME/Documents/code/mordor/task_apps"
 
 # cd PreForm
 alias preform_dev="cd $HOME/Documents/code/PreForm"
+
+# cd TestEngineering
+alias testeng="cd $HOME/Documents/code/TestEngineering"
 
 # cd Factory Software
 alias tars="cd $HOME/Documents/code/factory-software/components/tars"
