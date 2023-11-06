@@ -34,7 +34,7 @@ vim.opt.cursorline = true
 vim.opt.numberwidth = 2
 vim.opt.linebreak = true
 vim.opt.sidescrolloff = 8
-vim.opt.guifont = "monospace:h17"
+vim.opt.guifont = "monospace:h12"
 vim.opt.whichwrap = "bs<>[]hl"
 
 vim.o.completeopt = 'menuone,noselect'
