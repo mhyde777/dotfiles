@@ -24,8 +24,11 @@ alias steve=$HOME/Documents/scripts/shell/firmware/steve_build.sh
 ###					   VIRTUALENV					   ###
 ##########################################################
 
-# Enable Data Python Virtualenv Python 3.11
+# Enable Gen Python Virtualenv Python 3.11
 alias genpy="source $HOME/.venv/gen/bin/activate"
+
+# Enable Test Python Virtualenv Python 3.11
+alias testpy="source $HOME/.venv/testeng/bin/activate"
 
 ##########################################################
 ###					     HELPERS					   ###
