@@ -126,7 +126,7 @@ if [ -f ~/.shell/bash_func.sh ]; then
     . ~/.shell/bash_func.sh
 fi
 
-
 export PYTHONPATH="${PYTHONPATH}:$HOME/.local/bin"
+export PATH="$HOME/.neovim/bin:$PATH"
 
 set -o vi
