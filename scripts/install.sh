@@ -2,8 +2,6 @@
 
 echo "Install applications"
 ./apps.sh
-echo "Configuring filesystem"
-./fs.sh
 echo "Removing snapd"
 ./rm_snap.sh
 
@@ -15,15 +13,6 @@ if [ "$apps" == "y" ]; then
     ./apps_opt.sh
 else
     echo "Ignoring optional apps installation"
-fi
-
-echo "Would you like to install the source repositories? [y/N]"
-read source
-
-if [ "$source" == "y" ]; then
-    ./sources.sh
-else
-    echo "Ignoring source repositories"
 fi
 
 echo "Would you like to install FiraMono Font? [y/N]"

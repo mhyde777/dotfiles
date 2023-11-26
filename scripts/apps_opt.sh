@@ -13,7 +13,3 @@ sudo apt install               \
     fd-find -y
 
 sudo npm install -g tree-sitter-cli
-
-# Install Rust
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-

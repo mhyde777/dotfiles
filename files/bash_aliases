@@ -1,36 +1,6 @@
 # /bin/bash
 
 ##########################################################
-###						LAUNCHERS					   ###
-##########################################################
-
-# Connect VPN
-alias vpnon="openvpn3 session-start --config profile.ovpn"
-
-# Pause VPN
-alias vpnoff="openvpn3 session-manage --config profile.ovpn --disconnect"
-
-##########################################################
-###					    COMPILING					   ###
-##########################################################
-
-# Build Peripheral Firmware
-alias build_firmware=$HOME/Documents/scripts/shell/firmware/build_firmwares.sh
-
-# Build C++ Task Engine Cross Compile
-alias steve=$HOME/Documents/scripts/shell/firmware/steve_build.sh
-
-##########################################################
-###					   VIRTUALENV					   ###
-##########################################################
-
-# Enable Gen Python Virtualenv Python 3.11
-alias genpy="source $HOME/.venv/gen/bin/activate"
-
-# Enable Test Python Virtualenv Python 3.11
-alias testpy="source $HOME/.venv/testeng/bin/activate"
-
-##########################################################
 ###					     HELPERS					   ###
 ##########################################################
 
@@ -46,26 +16,9 @@ alias c=clear
 # Neovim
 alias vim=nvim
 
-# Prepare ESP-IDF
-alias esp=". $HOME/Documents/sources/esp-idf/export.sh"
-
 ##########################################################
 ###					       SSH  					   ###
 ##########################################################
 
 # XTERM SSH
 alias ssh='TERM=xterm ssh'
-
-##########################################################
-###					   NAVIGATION  					   ###
-##########################################################
-
-# cd Mordor
-alias mordor="cd $HOME/Documents/code/work/mordor"
-
-# cd Engine
-alias engine="cd $HOME/Documents/code/work/mordor/task_apps"
-
-# cd TestEngineering
-alias testeng="cd $HOME/Documents/code/work/TestEngineering"
-
