@@ -4,8 +4,8 @@
 ###                   QUICK ACCESS                     ###
 ##########################################################
 
-alias research='cd /media/mason/Disk_3TB/Research/'
-alias thesis='cd /media/mason/Disk_3TB/mhyde_thesis'
+alias research='cd /media/mason/WD_5TB/Research/'
+alias thesis='cd /media/mason/WD_5TB/mhyde_thesis'
 alias strada='ssh -X -l mhyde 208.93.252.136'
 alias sftpstrada='sftp mhyde@208.93.252.136'
 alias please='chmod u+x'
@@ -14,14 +14,16 @@ alias sftpandy='sftp mason_hyde@ssh3.hac.uri.edu'
 alias cp='cp -i'
 alias mv='mv -i'
 alias rm='rm -i'
-alias vpn='/opt/cisco/anyconnect/bin/vpnui &'
-alias novpn='/opt/cisco/anyconnect/bin/vpnui disconnect'
+alias vpn='/opt/cisco/secureclient/bin/vpnui &'
+alias novpn='/opt/cisco/secureclient/bin/vpnui disconnect'
 alias spotify='spotify &'
 alias pic='kitty +kitten icat'
-alias codethesis='code /media/mason/Disk_3TB/mhyde_thesis'
-alias coderesearch='code /media/mason/Disk_3TB/Research'
-alias ensemble_plot='. postproc/scripts/ensemble_plot'
-alias xmgrace_plot='. postproc/scripts/xmgrace_plot'
+alias codethesis='code /media/mason/WD_5TB/mhyde_thesis'
+alias coderesearch='code /media/mason/WD_5TB/Research'
+alias ensemble_plot='. /media/mason/WD_5TB/Research/post_run_analysis/postproc/scripts/ensemble_plot'
+alias xmgrace_plot='. /media/mason/WD_5TB/Research/post_run_analysis/postproc/scripts/xmgrace_plot' 
+alias transcribe_audio='python3 ~/Documents/scripts/python/transcribe_audio.py'
+alias dnd='cd ~/Documents/dnd_app/'
 
 ##########################################################
 ###					     HELPERS					   ###

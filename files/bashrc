@@ -128,5 +128,7 @@ fi
 
 export PYTHONPATH="${PYTHONPATH}:$HOME/.local/bin"
 export PATH="$HOME/.neovim/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
+export PATH="$HOME/.local/share/gem/ruby/3.0.0/bin:$PATH"
 
 set -o vi
