@@ -4,7 +4,7 @@
 ###                   QUICK ACCESS                     ###
 ##########################################################
 
-alias research='cd /media/mason/WD_5TB/Research/'
+alias research='cd /media/mason/WD_5TB/Research/post_run_analysis'
 alias thesis='cd /media/mason/WD_5TB/mhyde_thesis'
 alias strada='ssh -X -l mhyde 208.93.252.136'
 alias sftpstrada='sftp mhyde@208.93.252.136'
@@ -24,6 +24,9 @@ alias ensemble_plot='. /media/mason/WD_5TB/Research/post_run_analysis/postproc/s
 alias xmgrace_plot='. /media/mason/WD_5TB/Research/post_run_analysis/postproc/scripts/xmgrace_plot' 
 alias transcribe_audio='python3 ~/Documents/scripts/python/transcribe_audio.py'
 alias dnd='cd ~/Documents/dnd_app/'
+alias compile='/media/mason/WD_5TB/mhyde_thesis/compile_thesis.sh'
+alias gs='git status'
+alias xmgrace='xmgrace -maxpath 1000000'
 
 ##########################################################
 ###					     HELPERS					   ###
